@@ -84,18 +84,36 @@ def test1():
     assert len(choice_name(listnames, length=100 ))==100
     # assert len(new_list) == 100
 
-def test2():
-    for name in listnames:
-        letter = name[0:1]
-        assert letter.isupper()
+# def test2():
+#     for name in listnames:
+#         letter = name[0:1]
+#         assert letter.isupper()
+#
+# def test3():
+#     for name in listnames:
+#         letter = name[1:len(name)]
+#         assert letter.islower()
+#
+# def test4():
+#     for name in listnames:
+#         if name[0:1] == 'A':
+#         assert True
+#         else: assert False
 
-def test3():
-    for name in listnames:
-        letter = name[1:len(name)]
-        assert letter.islower()
+def test5():
+    assert rareletter(new_list)!= 'X'
+    # assert len(new_list) == 100
 
-def test4():
-    for name in listnames:
-        if name[0:1] == 'A':
-        assert True
-        else: assert False
+
+def test6():
+    assert len(frequentname(new_list))> 3
+
+def test7():
+    assert rareletter(new_list).isupper()
+
+def test8():
+    assert rareletter(new_list).islower()
+
+def test9():
+    assert rareletter(new_list).isdigit()
+
