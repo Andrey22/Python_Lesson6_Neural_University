@@ -1,101 +1,6 @@
-
-# Необходимо реализовать модуль divisor_master. Все функции модуля принимают на вход натуральные числа от 1 до 1000.
-
-# Модуль содержит функции:
-
-# 1) проверка числа на простоту (простые числа - это те числа у которых делители единица и они сами);
-
-import random
-
-def IsPrimeNumber(number):
-
-   divisor = 2
-
-   while number % divisor!= 0:
-
-       divisor += 1
-
-   return divisor == number
-
-# global sequence_num
-
-# диапазон натуральных числе от 1 до 1000
-
-sequence_num =list( range(1, 1001))
-
-# проверка
-
-# print(sequence_num)
-
-# случайное число в диапазоне от 1 до 1000
-
-# global x
-
-x=random.choice(sequence_num)
-
-print("число для анализа:",x)
-
-print(IsPrimeNumber(x))
-
-
-
-# 2) выводит список всех делителей числа;
-
-def GetDiv(number):
-
-    """Разложить число на множители"""
-
-    #result = [1]
-
-    listnum = []
-
-    stepnum = 2
-
-    while stepnum*stepnum <= number:
-
-        if number % stepnum == 0:
-
-            number//= stepnum
-
-            listnum.append(stepnum)
-
-        else:
-
-            stepnum += 1
-
-    if number > 1:
-
-        listnum .append(number)
-
-    return listnum
-
-print (GetDiv(x))
-
-
-
-# 3) выводит самый большой простой делитель числа.
-
-
-
-def PrimeDiv(number):
-
-    numlist = GetDiv(number)
-
-    max = 0
-
-    for index in numlist:
-
-        if index > max:
-
-            max = index
-
-    return (max)
-
-print(PrimeDiv(x))
-
 # LEsson4
-You're using code navigation to jump to definitions or references.
-Learn more or give us feedback
+# You're using code navigation to jump to definitions or references.
+# Learn more or give us feedback
 
 # 1. Напишите функцию (F): на вход список имен и целое число N; на выходе
 
@@ -123,7 +28,9 @@ new_list = choice_name(listnames, length=100)
 
 print(new_list)
 
-
+def test():
+    # assert len(choice_name(listnames, length ))==100
+    assert len(new_list) == 100
 
 # 2. Напишите функцию вывода самого частого имени из списка на выходе функции F;
 
@@ -195,28 +102,42 @@ print(rareletter(new_list))
 3. Напишите не менее 5ти тестов к функциям выбранного урока;
 4. В качестве ответа на дз пришлите ссылку на ветку с тестами или ссылку на PullRequest ветки с тестами с веткой master.
 '''
-# fib_num = lambda n: fib_num(n-1)+ fib_num(n-2) if n > 2 else 1
 
-#
+#      for name in listnames:
+#          letter = name [0:1]
+# assert letter.isupper()
 
-#
+# def func (listnames):
+#     for name in listnames:
+#         letter = name[1:2]
+#         if letter.islower():
+#             print (letter)
+#         else:
+#             print (letter)
+# func(listnames)
 
-# def test_1_fib_num():
 
-#     assert fib_num(6) == 8
+fib_num = lambda n: fib_num(n-1)+ fib_num(n-2) if n > 2 else 1
 
-#
 
-# def test_2_fib_num():
 
-#     assert fib_num(5) == 8
+def test_1_fib_num():
 
-#
+    assert fib_num(6) == 8
 
-# # f_{2n} = (f_{n+1})^2 - (f_{n-1})^2
 
-# def test_3_fib_num():
 
-#     n = 10
+def test_2_fib_num():
 
-#     assert fib_num(2*n) == fib_num(n+1)**2 - fib_num(n-1)**2
+    assert fib_num(5) == 8
+
+
+
+# f_{2n} = (f_{n+1})^2 - (f_{n-1})^2
+
+def test_3_fib_num():
+
+    n = 10
+
+    assert fib_num(2*n) == fib_num(n+1)**2 - fib_num(n-1)**2
+
