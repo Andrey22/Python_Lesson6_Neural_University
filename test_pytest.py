@@ -80,6 +80,8 @@ def rareletter(list2):
 
 print(rareletter(new_list))
 
+# Проведение тестов в Pytest
+
 def test1():
     assert len(choice_name(listnames, length=100 ))==100
     # assert len(new_list) == 100
@@ -104,6 +106,9 @@ def test6():
         letter = name[1:len(name)]
 
         assert letter.islower()
+
+def test7():
+    assert rareletter(new_list).isdigit()
 
 
 # def test2():
@@ -136,6 +141,5 @@ def test6():
 
 #         else: assert False
 
-def test6():
-    assert rareletter(new_list).isdigit()
+
 
